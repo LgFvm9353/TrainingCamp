@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历 - 我的名字</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧导航栏 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <button class="back-btn" onclick="goBack()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <nav class="nav-menu">
+                <a href="#personal" class="nav-item active" onclick="scrollToSection(event, 'personal')">
+                    <span class="icon">👤</span>
+                    <span>个人简历</span>
+                </a>
+                <a href="#education" class="nav-item" onclick="scrollToSection(event, 'education')">
+                    <span class="icon">🎓</span>
+                    <span>教育经历</span>
+                </a>
+                <a href="#awards" class="nav-item" onclick="scrollToSection(event, 'awards')">
+                    <span class="icon">🏆</span>
+                    <span>获奖经历</span>
+                </a>
+                <a href="#experience" class="nav-item" onclick="scrollToSection(event, 'experience')">
+                    <span class="icon">💼</span>
+                    <span>工作/项目经历</span>
+                </a>
+                <a href="#skills" class="nav-item" onclick="scrollToSection(event, 'skills')">
+                    <span class="icon">🔧</span>
+                    <span>个人技能</span>
+                </a>
+                <a href="#portfolio" class="nav-item" onclick="scrollToSection(event, 'portfolio')">
+                    <span class="icon">📁</span>
+                    <span>作品集</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <!-- 个人信息区域 -->
+            <section id="personal" class="section">
+                <h1 class="main-title">个人简历</h1>
+                <div class="personal-info">
+                    <div class="info-left">
+                        <h2 class="name">刘仁波</h2>
+                        <p class="intro">一句话简单介绍自己</p>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <span class="label">📱 联系/手机：</span>
+                                <span class="value">18888888888</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="label">📧 邮箱：</span>
+                                <span class="value">example@email.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="label">🎂 生日：</span>
+                                <span class="value">2004.03</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="label">📍 所在地：</span>
+                                <span class="value">江西</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="label">👤 常居地：</span>
+                                <span class="value">江西</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="label">🏠 居住地：</span>
+                                <span class="value">江西</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="label">🔗 个人主页：</span>
+                                <span class="value link">https://github.com/LgFvm9353</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-right">
+                        <div class="profile-image">
+                            <img src="https://vcg04.cfp.cn/creative/vcg/800/new/VCG211237949326.jpg" alt="个人照片" id="profileImg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 教育经历 -->
+            <section id="education" class="section">
+                <h2 class="section-title">
+                    🎓 教育经历
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>东华理工大学</h3>
+                                <span class="time">2023.09 - 至今</span>
+                            </div>
+                            <p class="timeline-desc">本科</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 获奖经历 -->
+            <section id="awards" class="section">
+                <h2 class="section-title">
+                    🏆 获奖经历
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>第十六届蓝桥杯程序赛</h3>
+                                <span class="time">2025.06</span>
+                            </div>
+                            <p class="timeline-desc">国家级奖学金</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>国家级奖学金</h3>
+                                <span class="time">2024.09</span>
+                            </div>
+                            <p class="timeline-desc">国家级奖学金</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 工作/项目经历 -->
+            <section id="experience" class="section">
+                <h2 class="section-title">
+                    💼 项目经验
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content expandable">
+                            <div class="timeline-header" onclick="toggleExpand(this)">
+                                <div class="header-left">
+                                    <h3>DreamScope</h3>
+                                </div>
+                                <div class="header-right">
+                                    <span class="expand-icon">▼</span>
+                                </div>
+                            </div>
+                            <div class="timeline-details">
+                                <p class="timeline-desc">
+                                    DreamScope 是一款基于 Next.js 全栈架构开发的移动端梦境记录与分析应用。通过集成 DeepSeek AI 智能分析技术，帮助用户记录、分析和理解自己的梦境世界，提供个性化的心理健康调察和梦境解读服务。
+                                </p>
+                                <p class="timeline-desc">
+                                    <strong>技能分析：</strong>
+                                </p>
+                                <p class="timeline-desc">
+                                    • 使用React18 + Next.js进行全栈开发，支持服务端渲染和静态生成，优化首屏加载性能<br>
+                                    • 使用lib-flexible + postcss-pxtorem实现移动端适配，实现多设备兼容<br>
+                                    • 集成 DeepSeek API 实现 AI 对话的流式输出；对接 Coze 工作流 API 完成 AI 头像生成功能<br>
+                                    • 设计基于 Zustand 的全局状态管理方案，通过自定义 Hooks 封装核心业务逻辑，实现 Store 与 UI 组件的低耦合<br>
+                                    • 采用瀑布流布局，提高页面内容展示密度和阅读流畅性
+                                </p>
+                                <p class="timeline-desc">
+                                    <strong>项目地址：</strong><a href="https://github.com/LgFvm9353/DreamScope" target="_blank" class="project-link">https://github.com/LgFvm9353/DreamScope</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content expandable">
+                            <div class="timeline-header" onclick="toggleExpand(this)">
+                                <div class="header-left">
+                                    <h3>TransVoice</h3>
+                                </div>
+                                <div class="header-right">
+                                    <span class="expand-icon">▼</span>
+                                </div>
+                            </div>
+                            <div class="timeline-details">
+                                <p class="timeline-desc">
+                                    基于浏览器端本地化运行的文本转语音（TTS）应用 Demo，使用 Hugging Face Transformers.js 库与 Xenova 的 SpeechTTS 模型，无需服务器支持。
+                                </p>
+                                <p class="timeline-desc">
+                                    <strong>技能分析：</strong>
+                                </p>
+                                <p class="timeline-desc">
+                                    • 采用单例模式管理 TTS 模型加载，有效避免资源重复加载消耗<br>
+                                    • 利用 Web Worker 封装模型推理计算，将密集型任务移出主线程，保障页面交互流畅性<br>
+                                    • 用 Tailwind CSS 快速构建响应式 UI，提升前端开发效率<br>
+                                    • 通过 Promise.all 并行加载主模型及其 Embedding 文件，显著缩短应用初始化时间，优化用户体验
+                                </p>
+                                <p class="timeline-desc">
+                                    <strong>项目地址：</strong><a href="https://github.com/LgFvm9353/TransVoice" target="_blank" class="project-link">https://github.com/LgFvm9353/TransVoice</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content expandable">
+                            <div class="timeline-header" onclick="toggleExpand(this)">
+                                <div class="header-left">
+                                    <h3>云帐通</h3>
+                                </div>
+                                <div class="header-right">
+                                    <span class="expand-icon">▼</span>
+                                </div>
+                            </div>
+                            <div class="timeline-details">
+                                <p class="timeline-desc">
+                                    基于React 18和Zarm UI开发的移动端智能记账应用，具备账单管理、收支分析、数据可视化等功能，并集成AI智能对话服务，提供个性化的财务建议和专业的收支分析。
+                                </p>
+                                <p class="timeline-desc">
+                                    <strong>技能分析：</strong>
+                                </p>
+                                <p class="timeline-desc">
+                                    • 封装 Axios 请求库并实现基于 JWT 的双 Token 认证机制（Access/Refresh Token），实现用户认证的无感刷新<br>
+                                    • 接入专属Agent并连接Coze数据库，提供基于真实交易数据的智能分析与专属对话<br>
+                                    • 使用 React.lazy + Suspense 实现懒加载，自动拆分代码并按需加载组件和路由，显著提升页面加载速度<br>
+                                    • 开发自定义 Hook 管理流式 AI 对话，支持实时消息渲染、聊天记录本地持久化及自动滚动<br>
+                                    • 集成 ECharts 实现数据可视化，支持饼图、柱状图等多种图表展示形式
+                                </p>
+                                <p class="timeline-desc">
+                                    <strong>项目地址：</strong><a href="https://github.com/LgFvm9353/CloudBillPass" target="_blank" class="project-link">https://github.com/LgFvm9353/CloudBillPass</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 个人技能 -->
+            <section id="skills" class="section">
+                <h2 class="section-title">
+                    🔧 个人技能
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-card green">
+                        <div class="skill-icon">💻</div>
+                        <h3>语言水平</h3>
+                        <p>英语四级</p>
+                    </div>
+                    <div class="skill-card blue">
+                        <div class="skill-icon">💾</div>
+                        <h3>软件技能</h3>
+                        <p>软件技能</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 作品集 -->
+            <section id="portfolio" class="section">
+                <h2 class="section-title">
+                    📁 作品集
+                </h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <p>待定作品集</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <p>待定作品集</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
