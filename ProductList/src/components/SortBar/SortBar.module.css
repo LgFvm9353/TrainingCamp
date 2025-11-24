@@ -1,0 +1,130 @@
+.sortBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.total {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.totalNumber {
+  font-weight: 500;
+  color: #212529;
+  font-size: 15px;
+}
+
+.dropdownWrapper {
+  position: relative;
+}
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  color: #495057;
+  font-weight: 400;
+  min-width: 140px;
+  justify-content: space-between;
+}
+
+.dropdownTrigger:hover {
+  border-color: #adb5bd;
+  background: #f8f9fa;
+}
+
+.dropdownTrigger:focus {
+  outline: none;
+  border-color: #212529;
+  box-shadow: 0 0 0 3px rgba(33, 37, 41, 0.05);
+}
+
+.chevron {
+  color: #6c757d;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s ease;
+  color: #495057;
+  font-weight: 400;
+  text-align: left;
+}
+
+.dropdownItem:hover {
+  background: #f8f9fa;
+  color: #212529;
+}
+
+.dropdownItem.active {
+  background: #f8f9fa;
+  color: #212529;
+  font-weight: 500;
+}
+
+.checkIcon {
+  color: #212529;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+  .sortBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .dropdownWrapper {
+    width: 100%;
+  }
+
+  .dropdownTrigger {
+    width: 100%;
+  }
+
+  .dropdownMenu {
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+}

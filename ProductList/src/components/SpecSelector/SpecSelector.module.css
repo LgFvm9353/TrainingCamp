@@ -1,0 +1,66 @@
+.specSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.specGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.specName {
+  font-size: 14px;
+  color: #495057;
+  min-width: 60px;
+  padding-top: 8px;
+}
+
+.specValues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: 1;
+}
+
+.specValue {
+  padding: 8px 16px;
+  border: 1px solid #dee2e6;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  color: #495057;
+  font-weight: 400;
+}
+
+.specValue:hover {
+  border-color: #212529;
+  color: #212529;
+}
+
+.specValue.selected {
+  background: #212529;
+  border-color: #212529;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .specGroup {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .specName {
+    min-width: auto;
+    padding-top: 0;
+  }
+
+  .specValue {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+}
