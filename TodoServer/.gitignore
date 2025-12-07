@@ -1,0 +1,24 @@
+# 依赖
+node_modules/
+
+# 日志
+*.log
+npm-debug.log*
+
+# 数据文件（可选，如果不想提交数据文件可以取消注释）
+# todos.json
+
+# 环境变量
+.env
+.env.local
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
