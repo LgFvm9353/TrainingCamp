@@ -1,0 +1,234 @@
+:root {
+  background-color: #f5f5f5;
+  --color-bg-page: #f5f5f5;
+  --color-bg-card: #ffffff;
+  --color-border-soft: #e0e0e0;
+  --color-text-main: #222222;
+  --color-text-muted: #666666;
+  --color-accent: #2f7cf6;
+  --color-accent-soft: #e3edff;
+}
+
+text {
+  color: var(--color-text-main);
+}
+
+.AppRoot {
+  min-height: 100vh;
+  background-color: var(--color-bg-page);
+  padding: 20px 16px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.ChatCard {
+  border-radius: 14px;
+  background-color: var(--color-bg-card);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  padding: 16px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ChatHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--color-border-soft);
+  padding-bottom: 10px;
+}
+
+.ChatTitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ChatSubtitle {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.Status {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.Status--connecting {
+  opacity: 0.9;
+}
+
+.Status--open {
+  background-color: #e5f7eb;
+  color: #1b8c3d;
+}
+
+.Status--closed,
+.Status--error {
+  background-color: #ffecec;
+  color: #c62828;
+}
+
+.UserSection {
+  padding-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.Label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.UserRow {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.TextInput {
+  border-width: 1px;
+  border-color: var(--color-border-soft);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #fafafa;
+}
+
+.TextInput--user {
+  flex: 1;
+}
+
+.TextInput--message {
+  flex: 1;
+  border-radius: 999px;
+  background-color: #fafafa;
+}
+
+.TextInput--disabled {
+  opacity: 0.6;
+  background-color: #f0f0f0;
+}
+
+.PrimaryButton {
+  min-width: 64px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  align-items: center;
+  justify-content: center;
+}
+
+.PrimaryButton--disabled {
+  opacity: 0.6;
+  background-color: #cccccc;
+}
+
+.PrimaryButton__text {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.UserHint {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.UserHint__name {
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.MessageList {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  padding: 8px 6px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: var(--color-border-soft);
+  background-color: #fafafa;
+  max-height: 420px;
+}
+
+.EmptyState {
+  padding: 16px 8px;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.EmptyState__title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.EmptyState__text {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.MessageRow {
+  margin-bottom: 6px;
+  align-items: flex-start;
+}
+
+.MessageRow--self {
+  align-items: flex-end;
+}
+
+.MessageBubble {
+  max-width: 80%;
+  padding: 7px 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border-width: 1px;
+  border-color: #e0e0e0;
+}
+
+.MessageBubble--self {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.MessageMeta {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.MessageBubble--self .MessageMeta {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.MessageText {
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+.MessageBubble--self .MessageText {
+  color: #ffffff;
+}
+
+.InputBar {
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top-width: 1px;
+  border-top-color: var(--color-border-soft);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
